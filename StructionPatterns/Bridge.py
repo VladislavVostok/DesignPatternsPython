@@ -78,13 +78,15 @@ if __name__ == "__main__":
     Клиентский код должен работать с любой предварительно сконфигурированной
     комбинацией абстракции и реализации.
     """
+    
+    interface_var = "nt"
+    if "nt" == interface_var:
+        implementation = ConcreteImplementationA()
+        abstraction = Abstraction(implementation)
+        client_code(abstraction)
+    elif "linux" == interface_var:
+        print("\n")
 
-    implementation = ConcreteImplementationA()
-    abstraction = Abstraction(implementation)
-    client_code(abstraction)
-
-    print("\n")
-
-    implementation = ConcreteImplementationB()
-    abstraction = ExtendedAbstraction(implementation)
-    client_code(abstraction)
+        implementation = ConcreteImplementationB()
+        abstraction = ExtendedAbstraction(implementation)
+        client_code(abstraction)
