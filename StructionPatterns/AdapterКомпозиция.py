@@ -46,8 +46,7 @@ if __name__ == "__main__":
     print("\n")
 
     adaptee = Adaptee()
-    print("Client: Класс Adaptee имеет странный интерфейс. "
-          "Врядли, я этого не понимаю:")
+    print("Client: Класс Adaptee имеет странный интерфейс. Врядли, я этого не понимаю:")
     print(f"Adaptee: {adaptee.specific_request()}", end="\n\n")
 
     print("Client: Но я могу работать с ним через адаптер:")
